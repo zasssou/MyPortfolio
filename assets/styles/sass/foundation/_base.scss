@@ -1,7 +1,12 @@
-
 @use '../global/index' as global;
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+body {
+  @include global.font-size-responsive();
+  font-family: global.$font-ja;
+  color: global.$dark;
 }

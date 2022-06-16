@@ -1,6 +1,24 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  color: #232629;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 1.2rem;
+  }
 }
 
 /*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
@@ -22,9 +40,12 @@ html {
  * 3. Remove gray overlay on links for iOS.
  */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-  -webkit-tap-highlight-color: transparent; /* 3*/
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-tap-highlight-color: transparent;
+  /* 3*/
 }
 
 /* Sections */
@@ -96,9 +117,12 @@ dd {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
   border-top-width: 1px;
   margin: 0;
   clear: both;
@@ -110,8 +134,10 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: inherit; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
 }
 
 address {
@@ -134,8 +160,8 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
 }
 
 /**
@@ -153,8 +179,10 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: inherit; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
 }
 
 /**
@@ -209,9 +237,9 @@ input,
 optgroup,
 select,
 textarea {
-  -webkit-appearance: none; /* 1 */
-  -moz-appearance: none;
-       appearance: none;
+  -webkit-appearance: none;
+  /* 1 */
+  appearance: none;
   vertical-align: middle;
   color: inherit;
   font: inherit;
@@ -220,7 +248,8 @@ textarea {
   margin: 0;
   border-radius: 0;
   text-align: inherit;
-  text-transform: inherit; /* 2 */
+  text-transform: inherit;
+  /* 2 */
 }
 
 /**
@@ -228,14 +257,12 @@ textarea {
  */
 [type=checkbox] {
   -webkit-appearance: checkbox;
-  -moz-appearance: checkbox;
-       appearance: checkbox;
+  appearance: checkbox;
 }
 
 [type=radio] {
   -webkit-appearance: radio;
-  -moz-appearance: radio;
-       appearance: radio;
+  appearance: radio;
 }
 
 /**
@@ -312,7 +339,8 @@ textarea {
  * 1. Correct the outline style in Safari.
  */
 [type=search] {
-  outline-offset: -2px; /* 1 */
+  outline-offset: -2px;
+  /* 1 */
 }
 
 /**
@@ -327,8 +355,10 @@ textarea {
  * 2. Fix font inheritance.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /**
@@ -367,7 +397,8 @@ summary {
 1. Correct table border color inheritance in all Chrome and Safari.
 */
 table {
-  border-color: inherit; /* 1 */
+  border-color: inherit;
+  /* 1 */
   border-collapse: collapse;
 }
 
@@ -385,3 +416,82 @@ th {
   text-align: left;
   font-weight: bold;
 }
+
+.icon-24 {
+  width: 2.4rem;
+  height: auto;
+}
+
+.nav {
+  height: 7.2rem;
+  padding: 0 4rem;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 480px) {
+  .nav {
+    padding: 0 1.6rem;
+    height: 4rem;
+  }
+}
+.nav .nav__logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .nav .nav__logo {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav .nav__logo {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav .nav__contact-link {
+    display: none;
+  }
+}
+.nav .nav__links {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  column-gap: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .nav .nav__links {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav .nav__links {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav .nav__links {
+    column-gap: 3.2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav .nav__links {
+    display: none;
+  }
+}
+.nav .nav__menu {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .nav .nav__menu {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

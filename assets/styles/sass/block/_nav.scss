@@ -1,0 +1,46 @@
+@use '../global/index' as global;
+
+.nav {
+  height: 7.2rem;
+  padding: 0 4rem;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  @include global.mq(sp) {
+    padding: 0 1.6rem;
+    height: 4rem;
+  }
+
+  .nav__logo {
+    @include global.h6-style;
+  }
+
+  .nav__contact-link {
+    @include global.mq(sp) {
+      display: none;
+    }
+  }
+
+  .nav__links {
+    @include global.h6-style;
+    display: flex;
+    align-items: center;
+    column-gap: 4rem;
+    @include global.mq(tab) {
+      column-gap: 3.2rem;
+    }
+    @include global.mq(sp) {
+      display: none;
+    }
+  }
+
+  .nav__menu {
+    display: none;
+
+    @include global.mq(sp) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+
+@use 'variables';
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get(variables.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin font-size-responsive(
+  $pc-size: 1.6rem,
+  $tb-size: 1.6rem,
+  $sp-size: 1.2rem,
+) {
+  font-size: $pc-size;
+  @include mq(tab) {
+    font-size: $tb-size;
+  }
+  @include mq(sp) {
+    font-size: $sp-size;
+  }
+}
+
+@mixin h1-style($language: en) {
+  font-family: map-get(variables.$font-families, $language);
+  @include font-size-responsive(6.4rem, 4.8rem, 3.2rem);
+}
+
+@mixin h2-style($language: en) {
+  font-family: map-get(variables.$font-families, $language);
+  @include font-size-responsive(4.8rem, 4.0rem, 2.4rem);
+}
+
+@mixin h3-style($language: en) {
+  font-family: map-get(variables.$font-families, $language);
+  @include font-size-responsive(4.0rem, 3.2rem, 2.0rem);
+}
+
+@mixin h4-style($language: en) {
+  font-family: map-get(variables.$font-families, $language);
+  @include font-size-responsive(3.2rem, 2.4rem, 2.0rem);
+  font-weight: 500;
+}
+
+@mixin h5-style($language: en) {
+  font-family: map-get(variables.$font-families, $language);
+  @include font-size-responsive(2.4rem, 2.0rem, 1.6rem);
+  font-weight: 500;
+}
+
+@mixin h6-style($language: en) {
+  font-family: map-get(variables.$font-families, $language);
+  @include font-size-responsive(2.0rem, 1.8rem, 1.6rem);
+  font-weight: 500;
+}
+
+@mixin label-style($language: en) {
+  font-family: map-get(variables.$font-families, $language);
+  @include font-size-responsive(1.6rem, 1.4rem, 1.2rem);
+  font-weight: 500;
+}
+
+@mixin small-label-style($language: en) {
+  font-family: map-get(variables.$font-families, $language);
+  @include font-size-responsive(1.2rem, 1.2rem, 1.2rem);
+  font-weight: 500;
+}

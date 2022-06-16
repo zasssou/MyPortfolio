@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+// ------------------------------------------------
+// color
+// ------------------------------------------------
+$dark: #232629;
+$gray: #bbb;
+$light: #efefef;
+$smoke-white: #fafafa;
+$white: #fff;
+
+
+// ------------------------------------------------
+// font
+// ------------------------------------------------
+$font-ja: '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
+$font-en: 'Poppins', sans-serif;
+
+$font-families: (
+  'ja': $font-ja,
+  'en': $font-en,
+);
+
+
+// ------------------------------------------------
+// value
+// ------------------------------------------------
+$breakpoints: (
+  'x-sp': 'screen and (max-width: 360px)',
+  'sp': 'screen and (max-width: 480px)',
+  'tab': 'screen and (max-width: 768px)',
+);
