@@ -1,0 +1,37 @@
+@use '../global/index' as global;
+
+.button-menu {
+  @include global.mq(sp) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}
+.button-menu::before,
+.button-menu::after {
+  content: '';
+  position: absolute;
+  border-bottom: 0.15rem solid global.$dark;
+  width: 2.4rem;
+  transition: all 0.5s;
+}
+.button-menu::before {
+  margin-top: 0.8rem;
+}
+.button-menu::after {
+  margin-bottom: 0.8rem;
+}
+
+.button-menu--open::before,
+.button-menu--open::after {
+  border-color: global.$white;
+  margin: 0;
+}
+.button-menu--open::before {
+  transform: rotate(-45deg);
+}
+.button-menu--open::after {
+  transform: rotate(45deg);
+}

@@ -5,10 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/styles/css/index.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/main.js"></script>
   <title>SosukeTanaka</title>
 </head>
 <body>
-  <header>
+  <header id="header">
     <nav class="nav">
       <a class="nav__logo" href="">Sosuke Tanaka</a>
       <a class="nav__contact-link" href=""><img class="icon-24" src="assets/images/mail.svg" alt="contact"></a>
@@ -16,8 +18,18 @@
         <li><a href="">Works</a></li>
         <li><a href="">About</a></li>
       </ul>
-      <a class="nav__menu" href=""><img class="icon-24" src="assets/images/menu.svg" alt="menu"></a>
+      <div class="nav__menu-button">
+        <button class="button-menu"></button>
+      </div>
+      <div class="nav-expand">
+        <ul class="nav-expand__links">
+          <li><a href="">Works</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
     </nav>
+    </div>
   </header>
   <main>
 
