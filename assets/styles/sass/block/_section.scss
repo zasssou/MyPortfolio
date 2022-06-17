@@ -3,10 +3,28 @@
 .section {
   width: 100%;
   max-width: 96rem;
-  padding: 4rem;
+  padding: 12rem 4rem;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include global.mq(tab) {
+    padding: 8rem 4rem;
+  }
   @include global.mq(sp) {
-    padding: 1.6rem;
+    padding: 4rem 1.6rem;
+  }
+
+  .section__title {
+    @include global.h2-style;
+    margin-bottom: 4.8rem;
+    @include global.mq(tab) {
+      margin-bottom: 4rem;
+    }
+    @include global.mq(sp) {
+      margin-bottom: 3.2rem;
+    }
   }
 }
 
@@ -14,7 +32,4 @@
   padding-top: 0;
   padding-bottom: 0;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
