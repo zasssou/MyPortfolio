@@ -5,23 +5,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 48px;
+    height: 48px;
   }
 }
 .button-menu::before,
 .button-menu::after {
   content: '';
   position: absolute;
-  border-bottom: 0.15rem solid global.$dark;
-  width: 2.4rem;
+  border-bottom: 1.5px solid global.$dark;
+  width: 24px;
   transition: all 0.5s;
 }
 .button-menu::before {
-  margin-top: 0.8rem;
+  margin-top: 8px;
 }
 .button-menu::after {
-  margin-bottom: 0.8rem;
+  margin-bottom: 8px;
 }
 
 .button-menu--open::before,
@@ -37,37 +37,37 @@
 }
 
 .button-normal {
-  width: 24rem;
-  height: 6.4rem;
+  width: 240px;
+  height: 64px;
   font-family: global.$font-en;
   @include global.font-size-responsive(2rem, 1.8rem, 1.6rem);
-  border: 0.1rem solid global.$dark;
-  border-radius: 3.2rem;
+  border: 1px solid global.$dark;
+  border-radius: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   
   @include global.mq(sp) {
-    height: 5.6rem;
+    height: 56px;
   }
   @include global.mq(sp) {
     width: 100%;
-    height: 4.8rem;
+    height: 48px;
   }
 }
 
 .button-normal::after {
   content: '';
   position: absolute;
-  margin-left: 17rem;
+  margin-left: 170px;
   display: flex;
   justify-content: right;
-  width: 1rem;
-  height: 1rem;
-  border-top: 0.1rem solid global.$dark;
-  border-right: 0.1rem solid global.$dark;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid global.$dark;
+  border-right: 1px solid global.$dark;
   transform: rotate(45deg);
   @include global.mq(sp) {
-    margin-left: calc(100% - 10rem);
+    margin-left: calc(100% - 100px);
   }
 }

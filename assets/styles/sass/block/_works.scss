@@ -4,17 +4,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 4%;
-  row-gap: 4rem;
-  margin-bottom: 6.4rem;
+  row-gap: 40px;
+  margin-bottom: 64px;
 
   @include global.mq(tab) {
-    row-gap: 3.2rem;
-    margin-bottom: 4.8rem;
+    row-gap: 32px;
+    margin-bottom: 48px;
   }
   @include global.mq(sp) {
     grid-template-columns: 1fr;
-    row-gap: 2.4rem;
-    margin-bottom: 3.2rem;
+    row-gap: 24px;
+    margin-bottom: 32px;
   }
 }
 
@@ -24,5 +24,5 @@
 
 .works-title {
   @include global.h4-style;
-  margin: 1.6rem 0 0.8rem 0;
+  margin: 16px 0 8px 0;
 }

@@ -4,19 +4,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 4rem;
+  row-gap: 40px;
   @include global.mq(tab) {
-    row-gap: 3.2rem;
+    row-gap: 32px;
   }
   @include global.mq(sp) {
-    row-gap: 2.4rem;
+    row-gap: 24px;
   }
 
   .top-message__symbol {
-    width: 16rem;
+    width: 160px;
     height: auto;
     @include global.mq(sp) {
-      width: 12rem;
+      width: 120px;
     }
   }
 
@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 0.8rem;
+    row-gap: 8px;
     text-align: center;
   }
 }

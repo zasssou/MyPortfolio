@@ -2,28 +2,28 @@
 
 .section {
   width: 100%;
-  max-width: 96rem;
-  padding: 12rem 4rem;
+  max-width: 960px;
+  padding: 120px 40px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   @include global.mq(tab) {
-    padding: 8rem 4rem;
+    padding: 80px 40px;
   }
   @include global.mq(sp) {
-    padding: 4rem 1.6rem;
+    padding: 40px 16px;
   }
 
   .section__title {
     @include global.h2-style;
-    margin-bottom: 4.8rem;
+    margin-bottom: 48px;
     @include global.mq(tab) {
-      margin-bottom: 4rem;
+      margin-bottom: 40px;
     }
     @include global.mq(sp) {
-      margin-bottom: 3.2rem;
+      margin-bottom: 32px;
     }
   }
 }
