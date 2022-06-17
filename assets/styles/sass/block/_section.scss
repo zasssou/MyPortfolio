@@ -1,0 +1,20 @@
+@use '../global/index' as global;
+
+.section {
+  width: 100%;
+  max-width: 96rem;
+  padding: 4rem;
+  margin: auto;
+  @include global.mq(sp) {
+    padding: 1.6rem;
+  }
+}
+
+.section--first-view {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

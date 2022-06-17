@@ -9,7 +9,7 @@
 
 @mixin font-size-responsive(
   $pc-size: 1.6rem,
-  $tb-size: 1.6rem,
+  $tb-size: 1.4rem,
   $sp-size: 1.2rem,
 ) {
   font-size: $pc-size;
@@ -19,11 +19,13 @@
   @include mq(sp) {
     font-size: $sp-size;
   }
+  line-height: 1.2em;
 }
 
 @mixin h1-style($language: en) {
   font-family: map-get(variables.$font-families, $language);
   @include font-size-responsive(6.4rem, 4.8rem, 3.2rem);
+  
 }
 
 @mixin h2-style($language: en) {
@@ -64,4 +66,11 @@
   font-family: map-get(variables.$font-families, $language);
   @include font-size-responsive(1.2rem, 1.2rem, 1.2rem);
   font-weight: 500;
+}
+
+@mixin icon-size($size: 2.4rem) {
+  width: auto;
+  height: auto;
+  max-width: $size;
+  max-height: $size;
 }

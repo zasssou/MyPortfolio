@@ -1,0 +1,35 @@
+@use '../global/index' as global;
+
+.top-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4rem;
+  @include global.mq(tab) {
+    row-gap: 3.2rem;
+  }
+  @include global.mq(sp) {
+    row-gap: 2.4rem;
+  }
+
+  .top-message__symbol {
+    width: 16rem;
+    height: auto;
+    @include global.mq(sp) {
+      width: 12rem;
+    }
+  }
+
+  .top-message__title {
+    @include global.h2-style;
+    text-align: center;
+  }
+
+  .top-message__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.8rem;
+    text-align: center;
+  }
+}
