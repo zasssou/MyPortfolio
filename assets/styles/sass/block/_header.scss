@@ -3,6 +3,7 @@
 .header {
   width: 100%;
   position: fixed;
+  z-index: 10;
   height: 72px;
   opacity: 0.9;
   background-color: global.$white;
