@@ -10,26 +10,23 @@
   <title>SosukeTanaka</title>
 </head>
 <body>
-  <header id="header">
-    <nav class="nav">
-      <a class="nav__logo" href="">Sosuke Tanaka</a>
-      <a class="nav__contact-link" href=""><img class="icon-24" src="assets/images/mail.svg" alt="contact"></a>
-      <ul class="nav__links">
+  <header id="header" class="header">
+    <nav class="header-nav">
+      <a class="header-nav__logo" href="">Sosuke Tanaka</a>
+      <a class="header-nav__contact-link" href="#contact"><img class="icon-24" src="assets/images/mail.svg" alt="contact"></a>
+      <ul class="header-nav__links">
         <li><a href="">Works</a></li>
         <li><a href="">About</a></li>
       </ul>
-      <div class="nav__menu-button">
+      <div class="header-nav__menu-button">
         <button class="button-menu"></button>
       </div>
-      <div class="nav-expand">
-        <ul class="nav-expand__links">
-          <li><a href="">Works</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </div>
     </nav>
-    </div>
+    <ul class="header-menu">
+      <li><a href="">Works</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </header>
   <main>
     <section class="section section--first-view">
@@ -84,6 +81,9 @@
         <p>もともとアプリケーション開発をしていた経験を活かし、GUIデザインをメインで担当しています。また、コンピュータービジョン分野の研究をしていたため論理的・数学的にデザインを考えるのが得意です。</p>  
       </div>
       <button class="button-normal">View more</button>
+    </section>
+    <section id="contact" class="section section--contact">
+      <h2 class="section__title">CONTACT</h2>
     </section>
   </main>
 </body>

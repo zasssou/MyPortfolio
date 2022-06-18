@@ -1,31 +1,41 @@
 @use '../global/index' as global;
 
-.nav {
+.header {
+  width: 100%;
+  position: fixed;
+  height: 72px;
+  opacity: 0.9;
+  background-color: global.$white;
+  transition: all 0.5s;
+
+  @include global.mq(sp) {
+    height: 48px;
+  }
+}
+
+.header-nav {
   height: 72px;
   padding: 0 40px;
-  position: fixed;
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  background-color: global.$white;
-  opacity: 0.9;
   @include global.mq(sp) {
     padding: 0 10px 0 16px;
     height: 48px;
   }
 
-  .nav__logo {
+  .header-nav__logo {
     @include global.h6-style;
   }
 
-  .nav__contact-link {
+  .header-nav__contact-link {
     @include global.mq(sp) {
       display: none;
     }
   }
 
-  .nav__links {
+  .header-nav__links {
     @include global.h6-style;
     display: flex;
     align-items: center;
@@ -38,39 +48,30 @@
     }
   }
 
-  .nav__menu-button {
+  .header-nav__menu-button {
     display: none;
     position: relative;
-    z-index: 3;
     @include global.mq(sp) {
       display: block;
     }
   }
 }
 
-.nav-expand {
-  height: 0%;
-  width: 100%;
-  opacity: 0;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  background-color: global.$dark;
-  transition: all 0.5s;
+.header-menu {
+  display: none;
+}
 
-  .nav-expand__links {
+.header--expand {
+  height: 320px;
+  background-color: global.$dark;
+  color: global.$white;
+  
+  .header-menu {
     @include global.h4-style;
-    color: global.$white;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 40px;
-  }
-}
-
-.nav-expand--open {
-  height: auto;
-  opacity: 1;
-  padding: 80px;
+    padding: 48px;
+  }  
 }
