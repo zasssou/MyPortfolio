@@ -780,10 +780,19 @@ a:hover {
 .top-message .top-message__symbol {
   width: 160px;
   height: auto;
+  animation: 2s ease-in 1s infinite alternate forwards running expansion;
 }
 @media screen and (max-width: 480px) {
   .top-message .top-message__symbol {
     width: 120px;
+  }
+}
+@keyframes expansion {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
   }
 }
 .top-message .top-message__title {
@@ -880,8 +889,20 @@ a:hover {
   }
 }
 
+.works-link {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
 .works-img {
   width: 100%;
+  transition: transform 0.3s;
+}
+
+.works-img:hover {
+  transform: scale(1.1);
 }
 
 .works-title {
