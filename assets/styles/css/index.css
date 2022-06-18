@@ -23,6 +23,14 @@ body {
   }
 }
 
+a {
+  transition: all 0.3s;
+}
+
+a:hover {
+  opacity: 0.4;
+}
+
 /*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -670,6 +678,7 @@ th {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s;
 }
 @media screen and (max-width: 768px) {
   .button-normal {
@@ -692,23 +701,31 @@ th {
     height: 48px;
   }
 }
-
-.button-normal::after {
-  content: "";
+.button-normal .button-normal__icon,
+.button-normal .button-normal__icon-hover {
   position: absolute;
-  margin-left: 170px;
-  display: flex;
-  justify-content: right;
-  width: 10px;
-  height: 10px;
-  border-top: 1px solid #232629;
-  border-right: 1px solid #232629;
-  transform: rotate(45deg);
+  right: calc(50% - 96px);
+  transition: all 0.3s;
 }
 @media screen and (max-width: 480px) {
-  .button-normal::after {
-    margin-left: calc(100% - 100px);
+  .button-normal .button-normal__icon,
+.button-normal .button-normal__icon-hover {
+    right: 40px;
   }
+}
+.button-normal .button-normal__icon-hover {
+  opacity: 0;
+}
+
+.button-normal:hover {
+  background-color: #232629;
+  color: #fff;
+}
+.button-normal:hover .button-normal__icon {
+  opacity: 0;
+}
+.button-normal:hover .button-normal__icon-hover {
+  opacity: 1;
 }
 
 .icon-24 {
