@@ -1,9 +1,18 @@
-@forward 'button';
-@forward 'icon';
+// ------------------------------------------------
+// common
+// ------------------------------------------------
 @forward 'header';
 @forward 'section';
-@forward 'top-message';
-@forward 'scroll-sign';
-@forward 'works';
-@forward 'about';
 @forward 'footer';
+
+@forward 'button';
+@forward 'icon';
+
+
+// ------------------------------------------------
+// front-page
+// ------------------------------------------------
+@forward 'front-page/top-message';
+@forward 'front-page/scroll-sign';
+@forward 'front-page/works';
+@forward 'front-page/about';
