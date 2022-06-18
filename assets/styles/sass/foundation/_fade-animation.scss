@@ -1,0 +1,18 @@
+@use '../global/index' as global;
+
+.fade-symbol,
+.fade-title,
+.fade-introduction,
+.fade {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 2s, transform 1s;
+}
+
+.fade-symbol.view,
+.fade-title.view,
+.fade-introduction.view,
+.fade.view {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -46,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
+  transition: background-color 0.3s, color 0.3s, transform 1s, opacity 2s;
   @include global.mq(sp) {
     height: 56px;
   }
@@ -59,7 +59,7 @@
   .button-normal__icon-hover {
     position: absolute;
     right: calc(50% - 96px);
-    transition: all 0.3s;
+    transition: opacity 0.3s;
     @include global.mq(sp) {    
       right: 40px;
     }

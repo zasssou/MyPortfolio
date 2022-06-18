@@ -1,36 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-size: 1.6rem;
-  line-height: 1.2em;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-  color: #232629;
-  line-height: 1.6em;
-}
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 1.4rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 1.2rem;
-  }
-}
-
-a {
-  transition: all 0.3s;
-}
-
-a:hover {
-  opacity: 0.4;
-}
-
 /*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -427,6 +396,54 @@ th {
   font-weight: bold;
 }
 
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.2em;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  color: #232629;
+  line-height: 1.6em;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  transition: all 0.3s;
+}
+
+a:hover {
+  opacity: 0.4;
+}
+
+.fade-symbol,
+.fade-title,
+.fade-introduction,
+.fade {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 2s, transform 1s;
+}
+
+.fade-symbol.view,
+.fade-title.view,
+.fade-introduction.view,
+.fade.view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -517,15 +534,6 @@ th {
 }
 
 .header-menu {
-  display: none;
-}
-
-.header--expand {
-  height: 320px;
-  background-color: #232629;
-  color: #fff;
-}
-.header--expand .header-menu {
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
   line-height: 1.2em;
@@ -535,16 +543,27 @@ th {
   align-items: center;
   row-gap: 40px;
   padding: 48px;
+  transform: translateY(-360px);
+  transition: transform 0.5s;
 }
 @media screen and (max-width: 768px) {
-  .header--expand .header-menu {
+  .header-menu {
     font-size: 2.4rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .header--expand .header-menu {
+  .header-menu {
     font-size: 2rem;
   }
+}
+
+.header--expand {
+  height: 320px;
+  background-color: #232629;
+  color: #fff;
+}
+.header--expand .header-menu {
+  transform: translateY(0);
 }
 
 .section {
@@ -678,7 +697,7 @@ th {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
+  transition: background-color 0.3s, color 0.3s, transform 1s, opacity 2s;
 }
 @media screen and (max-width: 768px) {
   .button-normal {
@@ -705,7 +724,7 @@ th {
 .button-normal .button-normal__icon-hover {
   position: absolute;
   right: calc(50% - 96px);
-  transition: all 0.3s;
+  transition: opacity 0.3s;
 }
 @media screen and (max-width: 480px) {
   .button-normal .button-normal__icon,
@@ -783,7 +802,7 @@ th {
     font-size: 2.4rem;
   }
 }
-.top-message .top-message__body {
+.top-message .top-message__introduction {
   display: flex;
   flex-direction: column;
   align-items: center;
