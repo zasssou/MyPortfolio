@@ -28,9 +28,9 @@ async function sleep(delay) {
 
 async function loadTopMessage() {
   $('.fade-symbol').addClass('view');
-  await sleep(500);
+  await sleep(300);
   $('.fade-title').addClass('view');
-  await sleep(500);
+  await sleep(300);
   $('.fade-introduction').addClass('view');
   
 }

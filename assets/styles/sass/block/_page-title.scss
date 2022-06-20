@@ -1,0 +1,28 @@
+@use '../global/index' as global;
+
+.page-title {
+  padding-top: 72px;
+  @include global.mq(sp) {
+    padding-top: 48px;
+  }
+}
+
+.page-title-background {
+  background-color: global.$smoke-white;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(global.$gray, 10%, transparent 10%);
+  background-size: 20px 20px;
+  @include global.mq(tab) {
+    height: 160px;
+  }
+  @include global.mq(sp) {
+    height: 96px;
+  }
+}
+
+.page-title-text {
+  @include global.h1-style;
+}

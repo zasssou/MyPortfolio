@@ -37,4 +37,11 @@
 .section--contact {
   background-color: global.$light;
   max-width: none;
+  margin-top: 120px;
+  @include global.mq(tab) {
+    margin-top: 80px;
+  }
+  @include global.mq(sp) {
+    margin-top: 40px;
+  }
 }
