@@ -576,11 +576,11 @@ a:hover {
 }
 
 .page-title-background {
-  background-color: #fafafa;
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #fafafa;
   background-image: radial-gradient(#bbb, 10%, transparent 10%);
   background-size: 20px 20px;
 }
@@ -658,6 +658,10 @@ a:hover {
   }
 }
 
+.section--about {
+  align-items: flex-start;
+}
+
 .section--first-view {
   padding-top: 0;
   padding-bottom: 0;
@@ -665,7 +669,9 @@ a:hover {
 }
 
 .section--contact {
-  background-color: #efefef;
+  background-color: #fafafa;
+  background-image: radial-gradient(#bbb, 10%, transparent 10%);
+  background-size: 20px 20px;
   max-width: none;
   margin-top: 120px;
 }
@@ -1028,4 +1034,20 @@ a:hover {
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+.profile {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  column-gap: 16px;
+}
+
+.profile-list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 8px;
+  column-gap: 24px;
+}
+
+.profile-img {
+  width: 50%;
+}

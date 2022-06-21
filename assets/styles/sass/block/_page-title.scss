@@ -8,13 +8,11 @@
 }
 
 .page-title-background {
-  background-color: global.$smoke-white;
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: radial-gradient(global.$gray, 10%, transparent 10%);
-  background-size: 20px 20px;
+  @include global.dot-background;
   @include global.mq(tab) {
     height: 160px;
   }

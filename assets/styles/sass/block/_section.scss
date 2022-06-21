@@ -28,6 +28,10 @@
   }
 }
 
+.section--about {
+  align-items: flex-start;
+}
+
 .section--first-view {
   padding-top: 0;
   padding-bottom: 0;
@@ -35,7 +39,7 @@
 }
 
 .section--contact {
-  background-color: global.$light;
+  @include global.dot-background;
   max-width: none;
   margin-top: 120px;
   @include global.mq(tab) {

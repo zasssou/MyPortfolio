@@ -1,0 +1,19 @@
+@use '../../global/index' as global;
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  column-gap: 16px;
+}
+
+.profile-list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 8px;
+  column-gap: 24px;
+}
+
+.profile-img {
+  width: 50%;
+}

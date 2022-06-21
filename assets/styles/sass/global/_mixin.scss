@@ -74,3 +74,9 @@
   max-width: $size;
   max-height: $size;
 }
+
+@mixin dot-background {
+  background-color: variables.$smoke-white;
+  background-image: radial-gradient(variables.$gray, 10%, transparent 10%);
+  background-size: 20px 20px;
+}
