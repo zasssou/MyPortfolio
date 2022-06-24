@@ -406,7 +406,7 @@ body {
   line-height: 1.2em;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   color: #232629;
-  line-height: 1.6em;
+  line-height: 1.8em;
 }
 @media screen and (max-width: 768px) {
   body {
@@ -816,6 +816,13 @@ a:hover {
   max-height: 80px;
 }
 
+.icon-32 {
+  width: auto;
+  height: auto;
+  max-width: 32px;
+  max-height: 32px;
+}
+
 .icon-24 {
   width: auto;
   height: auto;
@@ -1087,19 +1094,19 @@ a:hover {
     column-gap: 16px;
   }
 }
-.history-summary .history-summary__summary {
+.history-summary .history-summary__text {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   font-size: 1.6rem;
   line-height: 1.2em;
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
-  .history-summary .history-summary__summary {
+  .history-summary .history-summary__text {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .history-summary .history-summary__summary {
+  .history-summary .history-summary__text {
     font-size: 1.2rem;
   }
 }
@@ -1200,5 +1207,51 @@ a:hover {
   }
 }
 .skills-card .skills-card__description {
+  text-align: justify;
+}
+
+.philosophy {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+}
+@media screen and (max-width: 768px) {
+  .philosophy {
+    margin-top: 40px;
+    row-gap: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .philosophy {
+    margin-top: 32px;
+    row-gap: 32px;
+  }
+}
+
+.philosophy-summary {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  margin-bottom: 16px;
+}
+.philosophy-summary .philosophy-summary__text {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .philosophy-summary .philosophy-summary__text {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .philosophy-summary .philosophy-summary__text {
+    font-size: 1.6rem;
+  }
+}
+
+.philosophy-description {
   text-align: justify;
 }

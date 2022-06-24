@@ -4,6 +4,10 @@
   @include global.icon-size(80px);
 }
 
+.icon-32 {
+  @include global.icon-size(32px);
+}
+
 .icon-24 {
   @include global.icon-size(24px);
 }

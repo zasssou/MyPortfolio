@@ -1,0 +1,31 @@
+@use '../../global/index' as global;
+
+.philosophy {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+  @include global.mq(tab) {
+    margin-top: 40px;
+    row-gap: 40px;
+  }
+  @include global.mq(sp) {
+    margin-top: 32px;
+    row-gap: 32px;
+  }
+}
+
+.philosophy-summary {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  margin-bottom: 16px;
+
+  .philosophy-summary__text {
+    @include global.h5-style(ja);
+  }
+}
+
+.philosophy-description {
+  text-align: justify;
+}
