@@ -1,0 +1,47 @@
+@use '../../global/index' as global;
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4%;
+  @include global.mq(tab) {
+    grid-template-columns: auto;
+    justify-content: center;
+    row-gap: 40px;
+  }
+  @include global.mq(sp) {
+    row-gap: 16px;
+  }
+}
+
+.skills-card {
+  border: 1px solid global.$gray;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include global.mq(sp) {
+    padding: 24px;
+  }
+
+  .skills-card__title {
+    @include global.h4-style;
+    margin-bottom: 16px;
+  }
+
+  .skills-card__skills {
+    @include global.label-style;
+    text-align: center;
+  }
+
+  .skills-card__img {
+    padding: 48px;
+    @include global.mq(sp) {
+      padding: 32px;
+    }
+  }
+
+  .skills-card__description {
+    text-align: justify;
+  }
+}

@@ -809,6 +809,13 @@ a:hover {
   opacity: 1;
 }
 
+.icon-80 {
+  width: auto;
+  height: auto;
+  max-width: 80px;
+  max-height: 80px;
+}
+
 .icon-24 {
   width: auto;
   height: auto;
@@ -1099,6 +1106,7 @@ a:hover {
 }
 
 .history-description {
+  text-align: justify;
   border-left: 2px solid #efefef;
   margin-left: 103px;
   padding: 8px 0 48px 51px;
@@ -1116,6 +1124,82 @@ a:hover {
   }
 }
 
-.history-block:last-child .history-description {
+.history-item:last-child .history-description {
   padding-bottom: 0;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4%;
+}
+@media screen and (max-width: 768px) {
+  .skills {
+    grid-template-columns: auto;
+    justify-content: center;
+    row-gap: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills {
+    row-gap: 16px;
+  }
+}
+
+.skills-card {
+  border: 1px solid #bbb;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .skills-card {
+    padding: 24px;
+  }
+}
+.skills-card .skills-card__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.2em;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 768px) {
+  .skills-card .skills-card__title {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills-card .skills-card__title {
+    font-size: 2rem;
+  }
+}
+.skills-card .skills-card__skills {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.2em;
+  font-weight: 500;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .skills-card .skills-card__skills {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills-card .skills-card__skills {
+    font-size: 1.2rem;
+  }
+}
+.skills-card .skills-card__img {
+  padding: 48px;
+}
+@media screen and (max-width: 480px) {
+  .skills-card .skills-card__img {
+    padding: 32px;
+  }
+}
+.skills-card .skills-card__description {
+  text-align: justify;
 }
