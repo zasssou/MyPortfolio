@@ -1040,6 +1040,11 @@ a:hover {
   justify-content: space-between;
   column-gap: 16px;
 }
+@media screen and (max-width: 480px) {
+  .profile {
+    flex-direction: column;
+  }
+}
 
 .profile-list {
   display: grid;
@@ -1050,4 +1055,67 @@ a:hover {
 
 .profile-img {
   width: 50%;
+}
+@media screen and (max-width: 480px) {
+  .profile-img {
+    width: 100%;
+    margin-top: 32px;
+  }
+}
+
+.history-summary {
+  display: grid;
+  grid-template-columns: 52px 24px 1fr;
+  column-gap: 40px;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .history-summary {
+    grid-template-columns: 48px 24px 1fr;
+    column-gap: 32px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .history-summary {
+    grid-template-columns: 40px 24px 1fr;
+    column-gap: 16px;
+  }
+}
+.history-summary .history-summary__summary {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .history-summary .history-summary__summary {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .history-summary .history-summary__summary {
+    font-size: 1.2rem;
+  }
+}
+
+.history-description {
+  border-left: 2px solid #efefef;
+  margin-left: 103px;
+  padding: 8px 0 48px 51px;
+}
+@media screen and (max-width: 768px) {
+  .history-description {
+    margin-left: 91px;
+    padding: 8px 0 40px 43px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .history-description {
+    margin-left: 66px;
+    padding: 8px 0 32px 27px;
+  }
+}
+
+.history-block:last-child .history-description {
+  padding-bottom: 0;
 }

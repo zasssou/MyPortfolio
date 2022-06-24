@@ -1,0 +1,38 @@
+@use '../../global/index' as global;
+
+.history-summary {
+  display: grid;
+  grid-template-columns: 52px 24px 1fr;
+  column-gap: 40px;
+  align-items: center;
+  @include global.mq(tab) {
+    grid-template-columns: 48px 24px 1fr;
+    column-gap: 32px;
+  }
+  @include global.mq(sp) {
+    grid-template-columns: 40px 24px 1fr;
+    column-gap: 16px;
+  }
+
+  .history-summary__summary {
+    @include global.label-style(ja);
+  }
+}
+
+.history-description {
+  border-left: 2px solid global.$light;
+  margin-left: 103px;
+  padding: 8px 0 48px 51px;
+  @include global.mq(tab) {
+    margin-left: 91px;
+    padding: 8px 0 40px 43px;
+  }
+  @include global.mq(sp) {
+    margin-left: 66px;
+    padding: 8px 0 32px 27px;
+  }
+}
+
+.history-block:last-child .history-description {
+  padding-bottom: 0;
+}
