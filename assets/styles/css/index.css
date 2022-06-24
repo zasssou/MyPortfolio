@@ -849,7 +849,6 @@ a:hover {
 .top-message .top-message__symbol {
   width: 160px;
   height: auto;
-  animation: 2s ease-in 1s infinite alternate forwards running expansion;
 }
 @media screen and (max-width: 480px) {
   .top-message .top-message__symbol {

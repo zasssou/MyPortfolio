@@ -19,7 +19,6 @@
     @include global.mq(sp) {
       width: 120px;
     }
-    animation:2s ease-in 1s infinite alternate forwards running expansion;
   }
 
   @keyframes expansion{

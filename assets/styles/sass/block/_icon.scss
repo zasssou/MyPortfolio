@@ -1,5 +1,9 @@
 @use '../global/index' as global;
 
+.icon-80 {
+  @include global.icon-size(80px);
+}
+
 .icon-24 {
   @include global.icon-size(24px);
 }

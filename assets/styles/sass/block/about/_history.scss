@@ -20,6 +20,7 @@
 }
 
 .history-description {
+  text-align: justify;
   border-left: 2px solid global.$light;
   margin-left: 103px;
   padding: 8px 0 48px 51px;
@@ -33,6 +34,6 @@
   }
 }
 
-.history-block:last-child .history-description {
+.history-item:last-child .history-description {
   padding-bottom: 0;
 }
