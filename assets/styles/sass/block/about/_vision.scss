@@ -1,0 +1,26 @@
+@use '../../global/index' as global;
+
+.vision {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 4%;
+  row-gap: 24px;
+  @include global.mq(tab) {
+    grid-template-columns: auto;
+  }
+}
+
+.vision-img {
+  width: 100%;
+  height: auto;
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.vision-summary {
+  @include global.h4-style(ja);
+}
+
+.vision-description {
+  text-align: justify;
+}

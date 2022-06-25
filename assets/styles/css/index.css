@@ -403,7 +403,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   color: #232629;
   line-height: 1.8em;
@@ -476,7 +476,7 @@ a:hover {
 .header-nav .header-nav__logo {
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-weight: 500;
 }
 @media screen and (max-width: 768px) {
@@ -497,7 +497,7 @@ a:hover {
 .header-nav .header-nav__links {
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -536,7 +536,7 @@ a:hover {
 .header-menu {
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-weight: 500;
   display: flex;
   flex-direction: column;
@@ -598,7 +598,7 @@ a:hover {
 .page-title-text {
   font-family: "Poppins", sans-serif;
   font-size: 6.4rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
 }
 @media screen and (max-width: 768px) {
   .page-title-text {
@@ -634,7 +634,7 @@ a:hover {
 .section .section__title {
   font-family: "Poppins", sans-serif;
   font-size: 4.8rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   margin-bottom: 48px;
 }
 @media screen and (max-width: 768px) {
@@ -691,7 +691,7 @@ a:hover {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-weight: 500;
   background-color: #232629;
   color: #fff;
@@ -753,7 +753,7 @@ a:hover {
   height: 64px;
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   border: 1px solid #232629;
   border-radius: 32px;
   display: flex;
@@ -873,7 +873,7 @@ a:hover {
 .top-message .top-message__title {
   font-family: "Poppins", sans-serif;
   font-size: 4.8rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
@@ -927,7 +927,7 @@ a:hover {
     row-gap: 4px;
     font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
-    line-height: 1.2em;
+    line-height: 1.5em;
     font-weight: 500;
     color: #bbb;
   }
@@ -983,7 +983,7 @@ a:hover {
 .works-title {
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-weight: 500;
   margin: 16px 0 8px 0;
 }
@@ -1014,7 +1014,7 @@ a:hover {
 .about-name {
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-weight: 500;
   margin-top: 24px;
 }
@@ -1097,7 +1097,7 @@ a:hover {
 .history-summary .history-summary__text {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   font-size: 1.6rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
@@ -1167,7 +1167,7 @@ a:hover {
 .skills-card .skills-card__title {
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-weight: 500;
   margin-bottom: 16px;
 }
@@ -1184,7 +1184,7 @@ a:hover {
 .skills-card .skills-card__skills {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-weight: 500;
   text-align: center;
 }
@@ -1238,7 +1238,7 @@ a:hover {
 .philosophy-summary .philosophy-summary__text {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   font-size: 2.4rem;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
@@ -1253,5 +1253,45 @@ a:hover {
 }
 
 .philosophy-description {
+  text-align: justify;
+}
+
+.vision {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 4%;
+  row-gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .vision {
+    grid-template-columns: auto;
+  }
+}
+
+.vision-img {
+  width: 100%;
+  height: auto;
+  grid-area: 1/1/3/2;
+}
+
+.vision-summary {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .vision-summary {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .vision-summary {
+    font-size: 2rem;
+  }
+}
+
+.vision-description {
   text-align: justify;
 }

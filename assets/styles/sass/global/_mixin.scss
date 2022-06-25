@@ -19,13 +19,12 @@
   @include mq(sp) {
     font-size: $sp-size;
   }
-  line-height: 1.2em;
+  line-height: 1.5em;
 }
 
 @mixin h1-style($language: en) {
   font-family: map-get(variables.$font-families, $language);
   @include font-size-responsive(6.4rem, 4.8rem, 3.2rem);
-  
 }
 
 @mixin h2-style($language: en) {
