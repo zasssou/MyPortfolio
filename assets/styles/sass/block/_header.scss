@@ -86,4 +86,8 @@
   z-index: 10;
   right: 24px;
   bottom: 24px;
+
+  @include global.mq(sp) {  
+    display: none;
+  }
 }
