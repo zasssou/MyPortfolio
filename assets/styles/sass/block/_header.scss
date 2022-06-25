@@ -6,6 +6,7 @@
   background-color: global.$white;
   width: 100%;
   height: 72px;
+  opacity: 0.9;
   transition: all 0.5s;
   @include global.mq(sp) {
     height: 48px;
@@ -88,6 +89,7 @@
   bottom: 24px;
 
   @include global.mq(sp) {  
-    display: none;
+    right: 0;
+    bottom: 0;
   }
 }
