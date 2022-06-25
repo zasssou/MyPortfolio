@@ -3,7 +3,6 @@
 // ------------------------------------------------
 // hamburger-menu
 // ------------------------------------------------
-
 .button-hamburger-menu {
   display: flex;
   justify-content: center;
@@ -47,7 +46,6 @@
 // ------------------------------------------------
 // normal
 // ------------------------------------------------
-
 .button-normal {
   width: 240px;
   height: 64px;
@@ -90,6 +88,47 @@
     opacity: 0;
   }
   .button-normal__icon-hover {
+    opacity: 1;
+  }
+}
+
+
+// ------------------------------------------------
+// scroll-top
+// ------------------------------------------------
+.button-scroll-top {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid global.$dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s, opacity 0.5s;
+}
+.button-scroll-top.hidden {
+  opacity: 0;
+}
+
+.button-scroll-top__icon,
+.button-scroll-top__icon-hover {
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.button-scroll-top__icon-hover {
+  opacity: 0;
+}
+
+
+.button-scroll-top:hover {
+  background-color: global.$dark;
+
+  .button-scroll-top__icon {
+    opacity: 0;
+  }
+
+  .button-scroll-top__icon-hover {
     opacity: 1;
   }
 }

@@ -577,11 +577,6 @@ a:hover {
   z-index: 10;
   right: 24px;
   bottom: 24px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid #232629;
-  background-color: #fff;
 }
 
 .page-title {
@@ -822,6 +817,41 @@ a:hover {
   opacity: 0;
 }
 .button-normal:hover .button-normal__icon-hover {
+  opacity: 1;
+}
+
+.button-scroll-top {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #232629;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s, opacity 0.5s;
+}
+
+.button-scroll-top.hidden {
+  opacity: 0;
+}
+
+.button-scroll-top__icon,
+.button-scroll-top__icon-hover {
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.button-scroll-top__icon-hover {
+  opacity: 0;
+}
+
+.button-scroll-top:hover {
+  background-color: #232629;
+}
+.button-scroll-top:hover .button-scroll-top__icon {
+  opacity: 0;
+}
+.button-scroll-top:hover .button-scroll-top__icon-hover {
   opacity: 1;
 }
 

@@ -12,21 +12,31 @@
 <body>
   <header id="header" class="header">
     <nav class="header-nav">
-      <a class="header-nav__logo" href="index.html">Sosuke Tanaka</a>
-      <a class="header-nav__contact-link" href="#contact"><img class="icon-24" src="assets/images/mail.svg" alt="contact"></a>
-      <ul class="header-nav__links">
-        <li><a href="page-works.html">Works</a></li>
-        <li><a href="page-about.html">About</a></li>
-      </ul>
-      <div class="header-nav__menu-button">
-        <button class="button-menu"></button>
+      <div class="header-navbar">
+        <a class="header-navbar__logo" href="index.html">Sosuke Tanaka</a>
+        <a class="header-navbar__contact-link" href="#contact">
+          <img class="icon-24" src="assets/images/mail.svg" alt="contact">
+        </a>
+        <ul class="header-navbar__links">
+          <li><a href="page-works.html">Works</a></li>
+          <li><a href="page-about.html">About</a></li>
+        </ul>
+        <div class="header-navbar__hamburger-menu">
+          <button class="button-hamburger-menu"></button>
+        </div>
       </div>
+      <ul class="header-sp-menu">
+        <li><a class="header-sp-menu__link" href="page-works.html">Works</a></li>
+        <li><a class="header-sp-menu__link" href="page-about.html">About</a></li>
+        <li><a class="header-sp-menu__link" href="#contact">Contact</a></li>
+      </ul>
     </nav>
-    <ul class="header-menu">
-      <li><a class="header-menu__link" href="page-works.html">Works</a></li>
-      <li><a class="header-menu__link" href="page-about.html">About</a></li>
-      <li><a class="header-menu__link" href="#contact">Contact</a></li>
-    </ul>
+    <div class="header-scroll-top">
+      <button onclick="location.href='#header'" class="button-scroll-top hidden">
+        <img class="button-scroll-top__icon icon-16" src="assets/images/scroll-top-dark.svg" alt="">
+        <img class="button-scroll-top__icon-hover icon-16" src="assets/images/scroll-top-light.svg" alt="">
+      </button>
+    </div>
   </header>
   <main>
     <section class="page-title">

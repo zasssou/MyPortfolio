@@ -10,7 +10,7 @@
   <title>SosukeTanaka</title>
 </head>
 <body>
-  <header class="header">
+  <header id="header" class="header">
     <nav class="header-nav">
       <div class="header-navbar">
         <a class="header-navbar__logo" href="">Sosuke Tanaka</a>
@@ -32,7 +32,10 @@
       </ul>
     </nav>
     <div class="header-scroll-top">
-      <button class="button-scroll-top"></button>
+      <button onclick="location.href='#header'" class="button-scroll-top hidden">
+        <img class="button-scroll-top__icon icon-16" src="assets/images/scroll-top-dark.svg" alt="">
+        <img class="button-scroll-top__icon-hover icon-16" src="assets/images/scroll-top-light.svg" alt="">
+      </button>
     </div>
   </header>
   <main>

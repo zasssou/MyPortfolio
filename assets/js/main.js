@@ -4,6 +4,7 @@ window.onload = function() {
 
   $(window).scroll(() => {
     fadeEffect();
+    showScrollTopButton();
   });
 
   $('.button-hamburger-menu').on('click', () => {
@@ -43,4 +44,13 @@ function fadeEffect() {
       $(this).addClass('view');
     }
   });
+}
+
+function showScrollTopButton() {
+  const scrollPosition = $(window).scrollTop();
+  if (scrollPosition > 800) {
+    $('.button-scroll-top').removeClass('hidden');
+  } else {
+    $('.button-scroll-top').addClass('hidden');
+  }
 }
