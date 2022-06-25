@@ -1,40 +1,52 @@
 @use '../global/index' as global;
 
-.button-menu {
-  @include global.mq(sp) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
-  }
+// ------------------------------------------------
+// hamburger-menu
+// ------------------------------------------------
+
+.button-hamburger-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
 }
-.button-menu::before,
-.button-menu::after {
+
+.button-hamburger-menu::before,
+.button-hamburger-menu::after {
   content: '';
   position: absolute;
   border-bottom: 1.5px solid global.$dark;
   width: 24px;
   transition: all 0.5s;
 }
-.button-menu::before {
+
+.button-hamburger-menu::before {
   margin-top: 8px;
 }
-.button-menu::after {
+
+.button-hamburger-menu::after {
   margin-bottom: 8px;
 }
 
-.button-menu--open::before,
-.button-menu--open::after {
+.button-hamburger-menu.open::before,
+.button-hamburger-menu.open::after {
   border-color: global.$white;
   margin: 0;
 }
-.button-menu--open::before {
+
+.button-hamburger-menu.open::before {
   transform: rotate(-45deg);
 }
-.button-menu--open::after {
+
+.button-hamburger-menu.open::after {
   transform: rotate(45deg);
 }
+
+
+// ------------------------------------------------
+// normal
+// ------------------------------------------------
 
 .button-normal {
   width: 240px;

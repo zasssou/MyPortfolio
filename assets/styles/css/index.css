@@ -420,7 +420,7 @@ body {
 }
 
 a {
-  transition: all 0.3s;
+  transition: opacity 0.3s;
 }
 
 a:hover {
@@ -444,57 +444,60 @@ a:hover {
   transform: translateY(0);
 }
 
-.header {
-  width: 100%;
+.header-nav {
   position: fixed;
   z-index: 10;
-  height: 72px;
-  opacity: 0.9;
   background-color: #fff;
+  width: 100%;
+  height: 72px;
   transition: all 0.5s;
 }
 @media screen and (max-width: 480px) {
-  .header {
+  .header-nav {
     height: 48px;
   }
 }
 
-.header-nav {
+.header-navbar {
+  width: 100%;
   height: 72px;
   padding: 0 40px;
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: space-between;
 }
 @media screen and (max-width: 480px) {
-  .header-nav {
-    padding: 0 10px 0 16px;
+  .header-navbar {
+    padding: 0 16px;
     height: 48px;
   }
 }
-.header-nav .header-nav__logo {
+.header-navbar .header-navbar__logo {
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
   line-height: 1.5em;
   font-weight: 500;
 }
 @media screen and (max-width: 768px) {
-  .header-nav .header-nav__logo {
+  .header-navbar .header-navbar__logo {
     font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .header-nav .header-nav__logo {
+  .header-navbar .header-navbar__logo {
     font-size: 1.6rem;
   }
 }
+.header-navbar .header-navbar__contact-link {
+  display: flex;
+  align-items: center;
+}
 @media screen and (max-width: 480px) {
-  .header-nav .header-nav__contact-link {
+  .header-navbar .header-navbar__contact-link {
     display: none;
   }
 }
-.header-nav .header-nav__links {
+.header-navbar .header-navbar__links {
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
   line-height: 1.5em;
@@ -504,36 +507,35 @@ a:hover {
   column-gap: 40px;
 }
 @media screen and (max-width: 768px) {
-  .header-nav .header-nav__links {
+  .header-navbar .header-navbar__links {
     font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .header-nav .header-nav__links {
+  .header-navbar .header-navbar__links {
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .header-nav .header-nav__links {
+  .header-navbar .header-navbar__links {
     column-gap: 32px;
   }
 }
 @media screen and (max-width: 480px) {
-  .header-nav .header-nav__links {
+  .header-navbar .header-navbar__links {
     display: none;
   }
 }
-.header-nav .header-nav__menu-button {
+.header-navbar .header-navbar__hamburger-menu {
   display: none;
-  position: relative;
 }
 @media screen and (max-width: 480px) {
-  .header-nav .header-nav__menu-button {
+  .header-navbar .header-navbar__hamburger-menu {
     display: block;
   }
 }
 
-.header-menu {
+.header-sp-menu {
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
   line-height: 1.5em;
@@ -543,27 +545,43 @@ a:hover {
   align-items: center;
   row-gap: 40px;
   padding: 48px;
-  transform: translateY(-360px);
+  transform: translateY(-400px);
   transition: transform 0.5s;
 }
 @media screen and (max-width: 768px) {
-  .header-menu {
+  .header-sp-menu {
     font-size: 2.4rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .header-menu {
+  .header-sp-menu {
     font-size: 2rem;
   }
 }
 
-.header--expand {
-  height: 320px;
-  background-color: #232629;
-  color: #fff;
-}
-.header--expand .header-menu {
+.header-sp-menu.open {
   transform: translateY(0);
+}
+
+.header-nav.open {
+  height: 336px;
+  color: #fff;
+  background-color: #232629;
+}
+.header-nav.open .header-sp-menu {
+  transform: translateY(0);
+}
+
+.header-scroll-top {
+  position: fixed;
+  z-index: 10;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #232629;
+  background-color: #fff;
 }
 
 .page-title {
@@ -707,18 +725,16 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .button-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
-  }
+.button-hamburger-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
 }
 
-.button-menu::before,
-.button-menu::after {
+.button-hamburger-menu::before,
+.button-hamburger-menu::after {
   content: "";
   position: absolute;
   border-bottom: 1.5px solid #232629;
@@ -726,25 +742,25 @@ a:hover {
   transition: all 0.5s;
 }
 
-.button-menu::before {
+.button-hamburger-menu::before {
   margin-top: 8px;
 }
 
-.button-menu::after {
+.button-hamburger-menu::after {
   margin-bottom: 8px;
 }
 
-.button-menu--open::before,
-.button-menu--open::after {
+.button-hamburger-menu.open::before,
+.button-hamburger-menu.open::after {
   border-color: #fff;
   margin: 0;
 }
 
-.button-menu--open::before {
+.button-hamburger-menu.open::before {
   transform: rotate(-45deg);
 }
 
-.button-menu--open::after {
+.button-hamburger-menu.open::after {
   transform: rotate(45deg);
 }
 
